@@ -2,25 +2,25 @@
 
 ## Install
 
-1. git clone git://github.com/huyng/bashmarks.git
+1. git clone git://github.com/congdepeng/bashmarks.git
 2. make install
 3. source **~/.local/bin/bashmarks.sh** from within your **~.bash\_profile** or **~/.bashrc** file
 
 ## Shell Commands
 
-    s <bookmark_name> - Saves the current directory as "bookmark_name"
+    save_mark <bookmark_name> - Saves the current directory as "bookmark_name"
     g <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"
-    p <bookmark_name> - Prints the directory associated with "bookmark_name"
-    d <bookmark_name> - Deletes the bookmark
-    l                 - Lists all available bookmarks
+    print_mark <bookmark_name> - Prints the directory associated with "bookmark_name"
+    delete_mark <bookmark_name> - Deletes the bookmark
+    list_mark                 - Lists all available bookmarks
     
 ## Example Usage
 
     $ cd /var/www/
-    $ s webfolder
+    $ save_mark webfolder
     $ cd /usr/local/lib/
-    $ s locallib
-    $ l
+    $ save_mark locallib
+    $ list_mark
     $ g web<tab>
     $ g webfolder
 
