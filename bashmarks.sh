@@ -87,11 +87,11 @@ function delete_mark {
 function check_help {
     if [ "$1" = "-h" ] || [ "$1" = "-help" ] || [ "$1" = "--help" ] ; then
         echo ''
-        echo 's <bookmark_name> - Saves the current directory as "bookmark_name"'
+        echo 'save_makr <bookmark_name> - Saves the current directory as "bookmark_name"'
         echo 'g <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"'
-        echo 'p <bookmark_name> - Prints the directory associated with "bookmark_name"'
-        echo 'd <bookmark_name> - Deletes the bookmark'
-        echo 'l                 - Lists all available bookmarks'
+        echo 'print_mark <bookmark_name> - Prints the directory associated with "bookmark_name"'
+        echo 'delete_mark <bookmark_name> - Deletes the bookmark'
+        echo 'list_mark                 - Lists all available bookmarks'
         kill -SIGINT $$
     fi
 }
@@ -159,11 +159,11 @@ function _purge_line {
 # bind completion command for g,p,d to _comp
 if [ $ZSH_VERSION ]; then
     compctl -K _compzsh g
-    compctl -K _compzsh p
-    compctl -K _compzsh d
+    compctl -K _compzsh print_mark
+    compctl -K _compzsh delete_mark
 else
     shopt -s progcomp
     complete -F _comp g
-    complete -F _comp p
-    complete -F _comp d
+    complete -F _comp print_mark
+    complete -F _comp delete_mark
 fi
