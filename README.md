@@ -9,7 +9,7 @@
 ## Shell Commands
 
     save_mark <bookmark_name> - Saves the current directory as "bookmark_name"
-    g <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"
+    f <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"
     print_mark <bookmark_name> - Prints the directory associated with "bookmark_name"
     delete_mark <bookmark_name> - Deletes the bookmark
     list_mark                 - Lists all available bookmarks
