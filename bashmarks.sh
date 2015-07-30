@@ -158,7 +158,7 @@ function _purge_line {
 
 # bind completion command for g,p,d to _comp
 if [ $ZSH_VERSION ]; then
-    compctl -K _compzsh g
+    compctl -K _compzsh f
     compctl -K _compzsh print_mark
     compctl -K _compzsh delete_mark
 else
