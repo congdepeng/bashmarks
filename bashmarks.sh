@@ -163,7 +163,7 @@ if [ $ZSH_VERSION ]; then
     compctl -K _compzsh delete_mark
 else
     shopt -s progcomp
-    complete -F _comp g
+    complete -F _comp f
     complete -F _comp print_mark
     complete -F _comp delete_mark
 fi
