@@ -53,7 +53,7 @@ function save_mark {
 }
 
 # jump to bookmark
-function g {
+function f {
     check_help $1
     source $SDIRS
     target="$(eval $(echo echo $(echo \$DIR_$1)))"
